@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharmila Senthil | Portfolio</title>
+    <!-- Import Noorie Template Fonts -->
+    <link href="https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=poppins@400,500,600,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark: #212121;
+            --light-bg: #fafafa;
+            --white: #ffffff;
+            --pink: #f8c9db;
+            --hot-pink: #f18cb2;
+            --beige: #ece5d5;
+            --border: 2px solid var(--dark);
+            --shadow: 6px 6px 0px 0px var(--dark);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, .tanker {
+            font-family: 'Tanker', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: var(--white);
+            border-bottom: var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Tanker', sans-serif;
+            font-size: 2.2rem;
+            color: var(--hot-pink);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--hot-pink);
+        }
+
+        /* Neo-Brutalist Reusables */
+        .neo-card {
+            background-color: var(--white);
+            border: var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 4rem;
+            margin: 4rem auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .neo-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--hot-pink);
+            color: var(--white);
+            border: var(--border);
+            border-radius: 50px;
+            font-family: 'Tanker', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 3px 3px 0px 0px var(--dark);
+        }
+
+        .neo-btn {
+            display: inline-block;
+            background-color: var(--beige);
+            border: var(--border);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px 0px var(--dark);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            margin-top: 1.5rem;
+        }
+
+        .neo-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            background-color: var(--beige);
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 200px 200px 0 0;
+            border: var(--border);
+            box-shadow: var(--shadow);
+            background-color: var(--pink);
+        }
+
+        /* Marquee */
+        .marquee-wrapper {
+            background-color: var(--hot-pink);
+            border-top: var(--border);
+            border-bottom: var(--border);
+            padding: 1rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+            font-family: 'Tanker', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        .marquee-content span {
+            margin: 0 2rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* About & Experience Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .exp-item {
+            background: var(--beige);
+            border: var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 4px 4px 0px 0px var(--dark);
+        }
+
+        .exp-item h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .exp-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            text-transform: none;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--hot-pink);
+        }
+
+        .exp-item ul {
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Work Section */
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .work-item {
+            background: var(--white);
+            border: var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
+        }
+
+        .work-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .work-img-container {
+            border-bottom: var(--border);
+            background: var(--light-bg);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .work-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-content {
+            padding: 2.5rem;
+            flex: 1;
+            background-color: var(--pink);
+        }
+
+        .work-content h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-content p {
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Process Section */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-card-item {
+            background: var(--beige);
+            border: var(--border);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 4px 4px 0px 0px var(--dark);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .process-card-item:hover {
+            transform: translateY(-5px);
+            background: var(--hot-pink);
+            color: var(--white);
+        }
+
+        .process-num {
+            font-family: 'Tanker', sans-serif;
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .process-card-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Modals */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(33, 33, 33, 0.8); 
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto; 
+            padding: 4rem;
+            border: var(--border);
+            border-radius: 24px;
+            box-shadow: 10px 10px 0px 0px var(--dark);
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: var(--dark);
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            color: var(--hot-pink);
+        }
+
+        .modal-header {
+            font-family: 'Tanker', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            border-bottom: var(--border);
+            padding-bottom: 1rem;
+            color: var(--hot-pink);
+        }
+
+        .modal-body p {
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .modal-body ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--hot-pink);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-section .neo-tag {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+
+        .contact-section h2 {
+            font-size: 6rem;
+            margin: 2rem 0;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero, .about-grid { flex-direction: column; }
+            .hero-text h1 { font-size: 4rem; }
+            .work-grid, .process-grid { grid-template-columns: 1fr; }
+            .neo-card { padding: 2rem; width: 95%; }
+            .nav-links { display: none; }
+            .contact-section h2 { font-size: 4rem; }
+            .modal-content { padding: 2rem; margin: 10% auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">sharmila senthil</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="neo-card hero">
+        <div class="hero-text">
+            <div class="neo-tag">Hey there!</div>
+            <h1>I'm Sharmila Senthil</h1>
+            <p>Marketing and communications professional specializing in digital marketing, content creation, and brand storytelling. I am obsessed with all things social and ready to make social media work for YOU.</p>
+            <a href="#contact" class="neo-btn">Book a 1:1 Call</a>
+        </div>
+        <div class="hero-image">
+            <img src="IMG_0675.JPG" alt="Sharmila Senthil">
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span>✦ STRATEGY</span>
+            <span>✦ CONTENT</span>
+            <span>✦ STORYTELLING</span>
+            <span>✦ CAMPAIGNS</span>
+            <span>✦ STRATEGY</span>
+            <span>✦ CONTENT</span>
+            <span>✦ STORYTELLING</span>
+            <span>✦ CAMPAIGNS</span>
+        </div>
+    </div>
+
+    <!-- About & Experience Section -->
+    <div id="about" class="neo-card">
+        <div class="about-grid">
+            <div class="about-text">
+                <div class="neo-tag">A little about me</div>
+                <h2 style="font-size: 4rem; margin-bottom: 2rem;">Professional Journey</h2>
+                <p>Currently pursuing a Master's in Media & Communication Studies with a specialization in Advertising & Corporate Communication at Christ University.</p>
+                <p>I hold a Bachelor of Arts in Psychology & Journalism from Jyoti Nivas College.</p>
+                <p>I help brands show up consistently and authentically. From crafting a cohesive visual identity to building a content calendar that actually gets followed, I focus on data-driven marketing initiatives and storytelling.</p>
+            </div>
+            
+            <div class="experience-list">
+                <div class="exp-item">
+                    <h3>Webenza</h3>
+                    <h4>Social Media Marketing Intern | Feb 2026 - Apr 2026</h4>
+                    <ul>
+                        <li>Planned and executed social media content strategies for enterprise brands including Brigade Group and BuzzWorks.</li>
+                        <li>Created and managed digital content calendars, ensuring timely execution across platforms.</li>
+                        <li>Analyzed campaign performance metrics and prepared engagement reports.</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <h3>Aurelius Media</h3>
+                    <h4>SM & Marketing Coordinator | Jan 2026 - Mar 2026</h4>
+                    <ul>
+                        <li>Assisted in executing digital marketing campaigns across multiple channels.</li>
+                        <li>Coordinated content workflows and ensured timely delivery of marketing assets.</li>
+                        <li>Conducted market and competitor research to identify emerging trends.</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <h3>Disha Communications</h3>
+                    <h4>Digital Marketing Intern | Apr 2025 - Nov 2025</h4>
+                    <ul>
+                        <li>Supported digital communication and content marketing initiatives.</li>
+                        <li>Conducted competitor analysis and market research.</li>
+                        <li>Assisted in preparing marketing reports and deriving insights.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Section -->
+    <div id="work" class="neo-card" style="background-color: var(--pink);">
+        <div class="neo-tag" style="background-color: var(--white); color: var(--dark);">My Portfolio</div>
+        <h2 style="font-size: 5rem; margin-bottom: 1rem;">Selected Projects</h2>
+        <p style="font-size: 1.2rem; font-weight: 500;">See the work I've done for some amazing brands.</p>
+        
+        <div class="work-grid">
+            <!-- Eluno Project -->
+            <div class="work-item">
+                <div class="work-img-container">
+                    <img src="1017242_T0_1.webp" alt="Eluno Eyewear">
+                </div>
+                <div class="work-content" style="background-color: var(--white);">
+                    <img src="image_a9c82a.png" alt="Eluno Logo" style="max-width: 150px; margin-bottom: 1rem;">
+                    <h3>Eluno</h3>
+                    <p style="font-weight: 700; color: var(--hot-pink);">Brand Experience & Event Strategy</p>
+                    <p>Created an event objective to feel fashion-forward, with a design and art focused theme that is young, energetic, and social-media friendly. The theme developed was "Embrace your 'Eye' dentity".</p>
+                    <div class="btn-group">
+                        <a href="Assignment - Brand Associate (1).pdf" target="_blank" class="neo-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0;">Read The Brief</a>
+                        <a href="Eluno - Assignment_ Submitted by Sharmila (1).pdf" target="_blank" class="neo-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0; background-color: var(--hot-pink); color: var(--white);">View Proposal</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adaddus Project -->
+            <div class="work-item">
+                <div class="work-img-container" style="background-color: var(--beige); padding: 2rem;">
+                    <img src="Screenshot 2026-06-23 000417.png" alt="Adaddus Logo" style="object-fit: contain;">
+                </div>
+                <div class="work-content" style="background-color: var(--white);">
+                    <h3>Adaddus</h3>
+                    <p style="font-weight: 700; color: var(--hot-pink);">Social Media & Visual Content</p>
+                    <p>Provided freelance creative support focused on developing social media creatives and visual content aligned with the brand's core communication goals.</p>
+                    <div class="btn-group">
+                        <a href="https://www.instagram.com/adaddus/" target="_blank" class="neo-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-top: 0;">View Instagram Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <div id="process" class="neo-card">
+        <div class="neo-tag">Creative Process</div>
+        <h2 style="font-size: 5rem; margin-bottom: 1rem;">How I Work</h2>
+        <p style="font-size: 1.2rem; font-weight: 500;">Click each step to read my detailed approach.</p>
+
+        <div class="process-grid">
+            <div class="process-card-item" onclick="openModal('modal1')">
+                <span class="process-num">01</span>
+                <h3>Discovery</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+            <div class="process-card-item" onclick="openModal('modal2')">
+                <span class="process-num">02</span>
+                <h3>Research</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+            <div class="process-card-item" onclick="openModal('modal3')">
+                <span class="process-num">03</span>
+                <h3>Creative Thinking</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+            <div class="process-card-item" onclick="openModal('modal4')">
+                <span class="process-num">04</span>
+                <h3>Strategy</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+            <div class="process-card-item" onclick="openModal('modal5')">
+                <span class="process-num">05</span>
+                <h3>Design & Content</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+            <div class="process-card-item" onclick="openModal('modal6')">
+                <span class="process-num">06</span>
+                <h3>Execution & Learning</h3>
+                <span class="read-more">Read Approach</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 3rem; background-color: var(--beige); border: var(--border); border-radius: 20px; box-shadow: var(--shadow);">
+            <h3 class="tanker" style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--hot-pink);">My Philosophy</h3>
+            <p style="font-size: 1.2rem; font-weight: 500;">Curiosity is my creative process. I ask questions until I find the real problem. I research until I understand the people behind it. I connect ideas that don't seem connected. I build strategies that balance relevance with originality. And I create work that is rooted in insight, not assumptions.<br><br><strong>Because the best ideas rarely come from the first answer. They come from being curious enough to keep asking why.</strong></p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="neo-card contact-section">
+        <div class="neo-tag">Let's work together</div>
+        <h2>Let's build something intentional.</h2>
+        <a href="mailto:sharmilasenthil.sb@gmail.com" class="neo-btn" style="background: var(--white); color: var(--dark); font-size: 1.2rem;">Email Me Directly</a>
+        
+        <div class="contact-details">
+            <span>📍 Bengaluru, India</span>
+            <span>📞 +91 8310028207</span>
+            <span>✉️ sharmilasenthil.sb@gmail.com</span>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">01 — Discovery</div>
+            <div class="modal-body">
+                <p><strong>I don't start with ideas. I start with questions.</strong></p>
+                <p>Most people see a brief and immediately think about logos, campaigns, or content. My first instinct is to ask questions. Lots of them.</p>
+                <ul>
+                    <li>Why does this brand exist?</li>
+                    <li>Who is it trying to help?</li>
+                    <li>What problem is it solving?</li>
+                    <li>Why does that problem exist in the first place?</li>
+                </ul>
+                <p><br>And then I keep asking why until I reach something deeper than the obvious answer.</p>
+                <p>For example, if someone came to me wanting to launch a short kurti brand, I wouldn't immediately think about colors, packaging, or Instagram posts. I would ask:<br><em>Why create another kurti brand?</em></p>
+                <p>Maybe the answer is: "To give women more options for modern ethnic wear."</p>
+                <p>Then I ask: <em>Why do women need more options?</em><br>Maybe because many fast-fashion brands have made fashion accessible, but also repetitive. I call this the "Zudio Effect." Most people who shop at Zudio have experienced walking into a mall, college campus, or café and spotting multiple people wearing the exact same outfit. The clothes are affordable and trendy, but they often lack individuality.</p>
+                <p>Then I ask: <em>Why is that a problem?</em><br>Because fashion isn't just clothing. It's self-expression. Most people don't want to accidentally match with strangers every time they step outside.</p>
+                <p>Then I ask: <em>Why kurtis specifically?</em><br>Maybe because the founder wants to celebrate Indian heritage while creating something modern and wearable for everyday life.</p>
+                <p>Now we've moved from: <em>"We sell kurtis."</em><br>To: <em>"We help women express individuality through modern Indian fashion while staying connected to their cultural roots."</em></p>
+                <p>That's a completely different brand story. And it all came from asking better questions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-header">02 — Research</div>
+            <div class="modal-body">
+                <p><strong>Understanding people before trying to sell to them.</strong></p>
+                <p>I believe the best marketing decisions are informed by both data and human behaviour. That's why I spend a lot of time researching. Not just statistics and reports. People.</p>
+                <p>I read:</p>
+                <ul>
+                    <li>Research papers</li>
+                    <li>Industry articles</li>
+                    <li>Consumer studies</li>
+                    <li>Reddit discussions</li>
+                    <li>Instagram comments</li>
+                    <li>Product reviews</li>
+                    <li>YouTube comment sections</li>
+                    <li>Community forums</li>
+                </ul>
+                <p><br>Because people are often more honest in comments and reviews than they are in surveys.</p>
+                <p>For example, if I'm studying a beauty brand, I don't just want to know the demographics. I want to know:</p>
+                <ul>
+                    <li>What frustrates people?</li>
+                    <li>What excites them?</li>
+                    <li>What do they complain about repeatedly?</li>
+                    <li>What language do they use naturally?</li>
+                    <li>What misconceptions exist?</li>
+                    <li>What emotional triggers influence their choices?</li>
+                </ul>
+                <p><br>Research helps me understand the gap between what brands think people want and what people actually care about.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-header">03 — Creative Thinking</div>
+            <div class="modal-body">
+                <p><strong>Finding connections where others see unrelated things.</strong></p>
+                <p>One of my favourite creative exercises is connecting completely unrelated objects, concepts, or experiences.</p>
+                <p>For example: <strong>A bookshelf and an elevator.</strong></p>
+                <p>At first glance, they have nothing in common. But when I look closer:</p>
+                <ul>
+                    <li>A bookshelf takes you somewhere mentally.</li>
+                    <li>An elevator takes you somewhere physically.</li>
+                    <li>Both begin with an opening.</li>
+                    <li>Both create access.</li>
+                    <li>Both move people from one place to another.</li>
+                    <li>Both represent possibility.</li>
+                    <li>Both can change your perspective depending on where they take you.</li>
+                </ul>
+                <p><br>By identifying shared qualities between unrelated things, I train myself to look beyond the obvious. This approach often leads to unexpected campaign ideas, visual metaphors, and brand narratives.</p>
+                <p>I believe creativity is less about waiting for inspiration and more about learning how to see patterns.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-header">04 — Strategy</div>
+            <div class="modal-body">
+                <p><strong>Turning insights into direction.</strong></p>
+                <p>Once I understand the audience and uncover the insight, I focus on creating a strategy that gives the brand a clear place in people's minds.</p>
+                <p>I look at:</p>
+                <ul>
+                    <li>What competitors are doing</li>
+                    <li>What everyone else is saying</li>
+                    <li>What conversations already exist</li>
+                    <li>What opportunities are being ignored</li>
+                    <li>What makes the brand genuinely different</li>
+                </ul>
+                <p><br>I pay attention to trends, but I don't believe every brand should jump on every trend. A trend only matters if it supports the brand's personality and goals.</p>
+                <p>I focus on:</p>
+                <ul>
+                    <li><strong>Brand Positioning:</strong> Where does the brand belong in the market?</li>
+                    <li><strong>USP Development:</strong> What can this brand own that competitors can't?</li>
+                    <li><strong>Content Direction:</strong> What stories should the brand tell consistently?</li>
+                    <li><strong>Platform Strategy:</strong> How should the brand behave differently on Instagram, LinkedIn, YouTube, or other platforms?</li>
+                    <li><strong>Brand Voice:</strong> What should the brand sound like when it speaks?</li>
+                    <li><strong>Cultural Relevance:</strong> How can the brand stay current without losing its identity?</li>
+                </ul>
+                <p><br>My goal is to build brands that feel intentional, not reactive.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <div class="modal-header">05 — Design & Content</div>
+            <div class="modal-body">
+                <p><strong>Making strategy visible.</strong></p>
+                <p>Once the thinking is complete, I translate ideas into content and visuals. I work primarily with:</p>
+                <ul>
+                    <li>Canva</li>
+                    <li>Social media creatives</li>
+                    <li>Presentation design</li>
+                    <li>Content planning</li>
+                    <li>Video editing</li>
+                    <li>Copywriting</li>
+                    <li>Visual storytelling</li>
+                </ul>
+                <p><br>I believe good design isn't about making things look attractive. It's about making ideas easier to understand. Every visual decision should support a larger objective. Whether it's a social media post, presentation, campaign asset, or content series, I focus on clarity, consistency, and communication.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <div class="modal-header">06 — Execution & Learning</div>
+            <div class="modal-body">
+                <p><strong>Great work doesn't end when it's published.</strong></p>
+                <p>Once a campaign or piece of content goes live, I pay attention to what happens next.</p>
+                <ul>
+                    <li>How did people respond?</li>
+                    <li>What conversations did it create?</li>
+                    <li>What performed well?</li>
+                    <li>What didn't connect?</li>
+                    <li>What can be improved?</li>
+                </ul>
+                <p><br>I believe every project leaves behind insights that can make the next one better. Marketing isn't just about creating. It's about observing, adapting, and continuously learning.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Modals -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent background scrolling
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto"; // Restore background scrolling
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
